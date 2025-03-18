@@ -1,0 +1,340 @@
+
+body{
+    background-color:#222222 ;
+}
+/*Uso flex con direction row , lo que permite que el contenador se vuelva flexible , alinearlos en horizontal
+por orden y en caso de reducir las dimensiones de la pantalla se pondrán uno debajo del otro. Hice lo mismo en las secciones 
+de presentacion, de idiomas , de proyectos destacados y en el footer. Lineas 42,148,253 y 297*/
+nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-evenly;
+    padding: 20px;
+    border-radius: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    
+}
+
+
+a{
+    color: #FF6600;
+    text-decoration:none;
+}
+/*En caso de pasar el cursor por encima de los enlaces aparecen un subrayado hago lo mismo en la linea
+166*/
+a:hover{
+    text-decoration: underline;
+}
+.crupi{
+    margin: 20px;
+    border-radius: 150px;
+    width: 200px;
+    height: 200px;
+}
+/*Cuando se pase el cursor por encima de mi imagen crecera */
+.crupi:hover{
+    transform: scale(1.1); 
+}
+/*Flex con direction row para la parte de presentación*/
+header>section{
+    display: flex;
+    flex: row wrap;
+    text-align: justify;
+    background-color:#4e4e4e;
+    border-radius: 5px;
+    margin-top: 70px;
+}
+.h2pres{
+    color: #FF6600;
+}
+p{
+    color:floralwhite ;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.h1sm{
+    text-align: center;
+    grid-area: h;
+    color: floralwhite;
+}
+/*En caso de pasar el cursor por el titulo de "Sobre mi" este se pondrá naranja , hago lo mismo con los
+h2 en la linea 287*/
+.h1sm:hover{
+    color: #FF6600;
+}
+/*En "sobre mi" uso grid template areas, el cual mediante la definicion de sus contenedores de manera ordenada
+conseguimos colocar correctamente la sección , para sus secciones internas utilizo "grid area" , uso también 
+el "justify-content" para que el espacio entre contenedores sea el adecuado*/
+.sobremi{
+    margin: 30px;
+    display: grid;
+    grid-template-areas: 
+    "h h"
+    "apt hab"
+    "forma hobb"
+    "fut fut";
+    grid-template-columns: auto(2,auto);
+    justify-content: space-evenly;
+    background-image: url(img/fonfo.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+.aptitudes{
+    grid-area: apt;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    border: 1px solid black;
+    width: 300px;
+    border-radius: 5px;
+    margin: 20px;
+    background-color: white;
+}
+
+.habilidades{
+    grid-area: hab;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    border: 1px solid black;
+    width: 300px;
+    border-radius: 5px;
+    margin: 20px;
+    background-color: white;
+}
+
+.formacion{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    border: 1px solid black;
+    width: 300px;
+    grid-area: forma;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    background-color: white;
+
+}
+.hobbies{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px;
+    border: 1px solid black;
+    width: 300px;
+    grid-area: hobb;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin: 20px;
+    background-color: white;
+}
+
+.futbolpok{
+    display: flex;
+    grid-area: fut;
+    justify-content: center;
+    margin-top: 10px;
+}
+.imgfut{
+    width: 300px;
+    height: 250px;
+    border-radius:20px ;
+}
+.h2Proy{
+
+    background-color: #4e4e4e;;
+   color: floralwhite;
+   border-radius: 5px;
+}
+/*En proyectos destacados empleo flex row wrap*/
+
+.proydesy{
+    display: flex;
+    flex: row wrap;
+    background-color: #4e4e4e;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+
+h2{
+    text-align: center;
+}
+
+article h3:hover{
+    text-decoration: underline;
+}
+
+.proy1{
+    text-align: center;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #000000;
+}
+.proy1>img{
+    width: 300px;
+    height: 200px;
+}
+
+.proy2{
+    text-align: center;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #000000;
+}
+.proy2>img{
+    width: 300px;
+    height: 200px;
+    
+}
+.proy3{
+    text-align: center;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #000000;
+}
+.proy3>img{
+    width: 300px;
+    height: 200px;
+    
+}
+
+.h2Id{
+    background-color: #000000;
+    color: floralwhite;
+    border-radius: 5px;
+}
+
+/*Use flex row wrap en el apartado de idiomas*/
+
+.idiomas{
+    display: flex;
+    flex: row wrap;
+    background-color: gainsboro;
+    justify-content: center;
+    background-color: #000000;
+    
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 450px;
+    margin: 10px;
+    color: black;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+.h2Exp{
+    background-color: #4e4e4e;
+    color: floralwhite;
+    border-radius: 5px;
+}
+/*Uso flex row wrap en experiencia*/
+.experiencia{
+    display: flex;
+    flex: row wrap;
+    justify-content: space-evenly;
+    background-color:#4e4e4e;
+    padding: 10px;
+    border-radius: 5px;
+}
+.experiencia> article{
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 300px;
+    background-color: #f2f2f2;
+    color: #000000;
+    
+}
+.h2cont{
+    background-color: #000000;
+    color: floralwhite;
+}
+/*Uso flex , con direction column en contacto*/
+.contacto{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #000000;
+    align-content: center;
+    border-radius: 5px;
+    
+}
+
+h2:hover{
+    color: #FF6600;
+}
+input{
+    width: 400px;
+}
+textarea{
+    width: 400px;
+}
+
+label{
+    font-size: large;
+}
+footer{
+    background-color: #4e4e4e;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 20px;
+}
+.fot2{
+    justify-content: space-evenly;
+}
+footer img{
+    width: 60px;
+    height: 50px;
+}
+@media (max-width:576px ){
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .sobremi{
+        display: flex;
+        flex-direction: column;
+    }
+    .proydesy{
+        display: flex;
+        flex-direction: column;
+    }
+    .experiencia{
+        display: flex;
+        flex-direction: column;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+    }
+}
