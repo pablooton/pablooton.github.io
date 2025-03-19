@@ -34,24 +34,30 @@ a:hover{
 .crupi{
     margin: 20px;
     border-radius: 150px;
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
 /*Cuando se pase el cursor por encima de mi imagen crecera */
 .crupi:hover{
     transform: scale(1.1); 
 }
 /*Flex con direction row para la parte de presentación*/
-header>section{
+header section{
     display: flex;
     flex: row wrap;
-    text-align: justify;
     background-color:#4e4e4e;
     border-radius: 5px;
     margin-top: 70px;
+    padding: 30px;
 }
 .h2pres{
     color: #FF6600;
+    margin: 20px;
+
+}
+.trab{
+    color: #FF6600;
+    margin: 20px;
 }
 p{
     color:floralwhite ;
